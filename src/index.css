@@ -1,0 +1,200 @@
+* { box-sizing: border-box; }
+* {
+  transition: all 0.2s ease-in-out;
+}
+html, body, #root { height: 100%; }
+body {
+  margin: 0;
+  background-color: #0a0f1c;
+  color: #e5e7eb;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, Arial, sans-serif;
+}
+
+/* Layout */
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+/* Header */
+.header { text-align: center; margin-bottom: 32px; }
+.header-sub {
+  color: #9ca3af;
+  letter-spacing: 0.2em;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+.header-title {
+  font-size: 40px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+.header-title .muted { color: #d1d5db; }
+.header-title .accent {
+  color: #22d3ee;
+  text-shadow: 0 0 15px rgba(34, 211, 238, 0.6);
+}
+.header-divider {
+  height: 2px;
+  margin-top: 12px;
+  background: linear-gradient(90deg, transparent, #22d3ee, transparent);
+  opacity: 0.6;
+}
+
+/* Form */
+.form {
+  margin-bottom: 24px;
+  background: #0f172a;
+  border: 1px solid #374151;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 0 20px rgba(34, 211, 238, 0.1);
+}
+.form-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.form-title {
+  color: #9ca3af;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+}
+.form-badge {
+  color: #22d3ee;
+  font-size: 11px;
+}
+.form-row { display: flex; gap: 10px; }
+.input {
+  flex: 1;
+  background: transparent;
+  border: 1px solid #4b5563;
+  border-radius: 8px;
+  padding: 10px 12px;
+  color: #e5e7eb;
+  outline: none;
+}
+.input.small { max-width: 140px; }
+.input:focus {
+  border-color: #22d3ee;
+  box-shadow: 0 0 8px rgba(34, 211, 238, 0.4);
+}
+.btn {
+  background: #22d3ee;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.btn:hover { background: #06b6d4; }
+.btn:active {
+  transform: scale(0.97);
+}
+
+/* Summary */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin: 16px 0 20px;
+}
+@media (min-width: 768px) {
+  .grid { grid-template-columns: repeat(4, 1fr); }
+}
+.card {
+  background: #0f172a;
+  border: 1px solid #374151;
+  border-radius: 12px;
+  padding: 14px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(34, 211, 238, 0.15);
+}
+.title {
+  color: #9ca3af;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  margin-bottom: 6px;
+}
+.value {
+  font-size: 22px;
+  font-weight: 700;
+}
+.cyan { color: #22d3ee; }
+.green { color: #4ade80; }
+.red { color: #f87171; }
+
+/* Table */
+.table-wrap {
+  background: #0f172a;
+  border: 1px solid #374151;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table thead tr {
+  color: #9ca3af;
+  border-bottom: 1px solid #374151;
+  text-align: left;
+}
+.table th, .table td {
+  padding: 14px;
+}
+.table tbody tr {
+  border-bottom: 1px solid #111827;
+}
+.table tbody tr:hover {
+  background: rgba(17, 24, 39, 0.7);
+}
+.score { color: #facc15; font-weight: 600; }
+
+/* Row actions */
+.row-actions { display: flex; gap: 8px; align-items: center; }
+.link-btn {
+  background: transparent;
+  border: none;
+  color: #9ca3af;
+  cursor: pointer;
+}
+.link-btn:hover { color: #22d3ee; }
+
+/* Footer */
+.footer {
+  margin-top: 32px;
+  border-top: 1px solid #1f2937;
+  padding-top: 16px;
+}
+.footer-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (min-width: 768px) {
+  .footer-row { flex-direction: row; }
+}
+.footer small { color: #9ca3af; }
+.badge {
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(34,211,238,0.4);
+  color: #22d3ee;
+  font-size: 11px;
+  box-shadow: 0 0 10px rgba(34,211,238,0.25);
+}
+.footer-divider {
+  height: 1px;
+  margin-top: 10px;
+  background: linear-gradient(90deg, transparent, #22d3ee, transparent);
+  opacity: 0.5;
+}
